@@ -1,0 +1,107 @@
+body{
+    background: lightgray;
+}
+
+.container, .button, .nav{
+    position: absolute;
+}
+
+.container{
+    margin: auto;
+    top: 10%;
+    left: 50%;
+    margin-left: -20px;
+}
+
+#toggle{
+    display: none;
+}
+
+.button{
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    background: #ec9f9e;
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button:before{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(90deg);
+}
+
+.button:after{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: #fff;
+}
+
+.nav{
+    transform: translateY(-10%);
+    opacity: 0;
+    top: 60px;
+    left: -100px;
+    transition: all 0.5s ease-in-out;
+    background: white;
+    width: 300px;
+    border-radius: 5px;
+    transform: translateY(0%);
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.nav a{
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    color: #ec9190;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 600ms;
+}
+
+.nav a:hover{
+    color: grey;
+}
+
+#toggle:checked ~ .nav{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+#toggle:checked ~ .button{
+    transform: rotate(135deg);
+    box-shadow: 0 0 0 0 transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
